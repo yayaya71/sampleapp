@@ -1,25 +1,26 @@
-var Login = {};
-
-Login.doLogin = function doLogin(loginForm) {
-
-    //空チェック
-    if(loginForm.username.value == '') {
-        return Login.doError('ユーザー名を入力してください。');
-    }
-    if(loginForm.password.value == '') {
-        return Login.doError('パスワードを入力してください。');
-    }
-
-    //エラーなし
-    return true;
-}
-
-/**
- * エラー時の動作
- * @param msg エラーメッセージ
- * @return falseを返す
- */
-Login.doError = function doError(msg) {
-    alert(msg);
-    return false;
-}
+function fieldChanged(){
+       var userId = getField("user_id");
+       var password = getField("password");
+       var disabled = true;
+       
+       if (userId.value.length > 0 && password.value.length > 0) {
+           disabled = false;
+       }
+    
+      var login = getField("login");
+      if (disabled) {
+          login.setAttribute("disabled", "disabled");
+      }
+      else {
+          login.removeAttribute("disabled");
+      }
+  }
+  
+ // フィールドを取得する関数
+  function getField(fieldName){
+      var field = document.getElementById(fieldName);
+      if (field == undefined) {
+          throw new Error("要素が見つかりません " + fieldName);
+      }
+      return field;
+  }
