@@ -15,10 +15,12 @@
          <table>
              <form action="jump.html" method="post">
              <tr><th>User ID</th>
-                 <td><input type="text" name="userID" value="" size="24" id="user_id"></td></tr>
+                 <td><input type="text" name="userID" value="" size="24" id="user_id" 
+                            onkeyup="fieldChanged();" onchange="fieldChanged();"></td></tr>
              <br>
              <tr><th>Password</th>
-                 <td><input type="password" name="password" value="" size="24" id="user_id"></td></tr>
+                 <td><input type="password" name="password" value="" size="24" id="user_id"
+                            onkeyup="fieldChanged();" onchange="fieldChanged();"></td></tr>
              <br>
              <br>
              <tr><td><button type="submit" value="login" id="login">login</button></td></tr>
