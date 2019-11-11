@@ -16,7 +16,6 @@ function fieldChanged(){
       }
   }
   
- // フィールドを取得する関数
   function getField(fieldName){
       var field = document.getElementById(fieldName);
       if (field == undefined) {
