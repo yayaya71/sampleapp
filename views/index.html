@@ -5,19 +5,23 @@
         <meta name="description" content="サンプルアプリケーション">
         <title>ログイン画面</title>
         <link rel="stylesheet" href="//localhost:8080/assets/style.css">
+        <script type="text/javascript" src="login.js">
+        </script>
     </head>
-    <body>
+    <body onload="fieldChanged();">
         <h1>Hello</h1>
          <hr>
          <div align="center">
          <table>
              <form action="jump.html" method="post">
-             <tr><th>User ID</th><td><input type="text" name="user_id" value="" size="24"></td></tr>
+             <tr><th>User ID</th>
+                 <td><input type="text" name="userID" value="" size="24" id="user_id"></td></tr>
              <br>
-             <tr><th>Password</th><td><input type="password" name="password" value="" size="24"></td></tr>
+             <tr><th>Password</th>
+                 <td><input type="password" name="password" value="" size="24" id="user_id"></td></tr>
              <br>
              <br>
-             <tr><td><button type="submit" name="login" value="login">login</button></td></tr>
+             <tr><td><button type="submit" value="login" id="login">login</button></td></tr>
              </form>    
          </table>
     </body>
